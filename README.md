@@ -1,6 +1,6 @@
 Student System fullstack using SpringBoot, React and MySQL
 
-Commits for creates archives Patterns = "package name (how many there are) + / + Archive name + type + action"
+(*deprecated*) Commits for creates archives Patterns = "package name (how many there are) + / + Archive name + type + action"
 
 commits patterns = https://medium.com/linkapi-solutions/conventional-commits-pattern-3778d1a1e657
 
