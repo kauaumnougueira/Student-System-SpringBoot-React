@@ -1,8 +1,7 @@
-import  React, { useState } from 'react';
+import  React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@mui/material/TextField';
 import { Container ,Paper , Button } from '@material-ui/core';
-import { TableBody } from '@mui/material';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -31,12 +30,25 @@ export default function Student() {
         const student={name,address}
         console.log(student)
         //saving in database
-        fetch("https://localhost:8080/students/add", {
+        fetch("http://localhost:8080/student/add", {
             method: "POST",
             headers: {"Content-Type" : "application/json"},
             body:  JSON.stringify(student)
+        }).then(()=>{
+            console.log("New student added")
         })
     }
+
+    const[students, setStudents]=useState([])
+
+    useEffect(()=>{
+        fetch("http://localhost:8080/student/getAll")
+        .then(res=>res.json())
+        .then((result)=>{
+            setStudents(result);
+        }
+    )
+    },[])
     return (
 
         <Container>
@@ -61,6 +73,20 @@ export default function Student() {
                 {name}
                 {address}
             </Paper>
+
+            <Paper elevation={3} style={paperStyle}>
+                <h1>Students: </h1>
+                {students.map(student=>(
+                    <Paper elevation={6} style={{margin:"10px", padding:"15px", textAlign:"left"}} key={student.id}>
+                        Id:{student.id}<br/>
+                        Name={student.name}<br/>
+                        Address:{student.address}
+                    </Paper>
+                ))}
+                
+
+            </Paper>
+
         </Container>
     );
 }
