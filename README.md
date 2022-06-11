@@ -7,17 +7,17 @@ Requisitos para rodar aplicação:
 
 Como Rodar: 
 (no cmd)
--git clone https://github.com/kauaumnougueira/Student-System-SpringBoot-React
+- "git clone https://github.com/kauaumnougueira/Student-System-SpringBoot-React"
 
 (na pasta clonada)
--Abrir cada pasta em uma janela do VSCode (Front e Back)
+- Abrir cada pasta em uma janela do VSCode (Front e Back)
 
 (Na pasta student_back_end)
--Iniciar servidor MYSQl e Apache
--Rodar aplicação Java
+- Iniciar servidor MYSQl e Apache
+- Rodar aplicação Java
 
 (Na pasta student_front_end)
--executar "npm start" no powersehll do VSCode
+- Executar "npm start" no powersehll do VSCode
 
 APLICAÇÂO RODANDO
 
