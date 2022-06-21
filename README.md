@@ -7,7 +7,7 @@ Requisitos para rodar aplicação:
 
 Como Rodar: 
 (no cmd)
-- "git clone https://github.com/kauaumnougueira/Student-System-SpringBoot-React"
+- "git clone https://github.com/kauaumnougueira/Student-System-SpringBoot-React.git"
 
 (na pasta clonada)
 - Abrir cada pasta em uma janela do VSCode (Front e Back)
